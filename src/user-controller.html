@@ -1,0 +1,9 @@
+<template>
+    <div class="controller">
+        <span class="desc-text">Number of users to create or update</span>
+        <input type="text" value.bind="userNumber" class="${!valid ? 'invalid' : 'valid'}">
+        <button click.delegate="createUsers()" disabled.bind="!valid">Create</button>
+        <button click.delegate="updateUsers()" disabled.bind="!valid">Update</button>
+        <button click.delegate="clearUsers()">Clear</button>
+    </div>
+</template>

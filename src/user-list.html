@@ -1,0 +1,16 @@
+<template>
+    <require from="./user-list-item"></require>
+    <ul class="user-list">
+        <li class="user-list-item-header">
+            <span class="user-list-column-header">First Name</span>
+            <span class="user-list-column-header">Last Name</span>
+            <span class="user-list-column-header">Occupation</span>
+            <span class="user-list-column-header">Gender</span>
+        </li>
+        <user-list-item
+                repeat.for="user of usermanager.users"
+                user.bind="user"
+                class="user-list-item">
+        </user-list-item>
+    </ul>
+</template>
